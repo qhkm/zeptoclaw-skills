@@ -13,12 +13,22 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 
 ## Skills in This Repo
 
-| Skill | Description | Author |
-|-------|-------------|--------|
-| [clawpocket](./clawpocket/) | Publish trade signals to ClawPocket marketplace | [@aimaneth](https://github.com/aimaneth) |
-| [shopee](./shopee/) | Malaysian e-commerce helper for Shopee seller operations | ZeptoClaw |
-| [weather](./weather/) | Get current weather and forecasts without API keys | ZeptoClaw |
-| [template](./template/) | Starter template for new skills | ZeptoClaw |
+| Skill | Description | Tags | Author |
+|-------|-------------|------|--------|
+| [clawpocket](./clawpocket/) | Publish trade signals to ClawPocket marketplace | crypto, defi | [@aimaneth](https://github.com/aimaneth) |
+| [docker-deploy](./docker-deploy/) | Deploy, update, and manage Docker Compose services in production | docker, devops | ZeptoClaw |
+| [git-release](./git-release/) | Automate semver releases — bump version, generate changelog, tag, and publish GitHub Release | git, devops, semver | ZeptoClaw |
+| [lazada](./lazada/) | Lazada Seller Center API — manage products, orders, and inventory across SEA | lazada, ecommerce, sea | ZeptoClaw |
+| [make-invoice](./make-invoice/) | Generate professional HTML/PDF invoices from order data and email them | invoice, billing, pdf | ZeptoClaw |
+| [notion](./notion/) | Read, create, and update Notion pages and databases via the official API | notion, productivity | ZeptoClaw |
+| [postgres](./postgres/) | PostgreSQL queries, schema management, backups, and performance tuning | database, sql | ZeptoClaw |
+| [send-email](./send-email/) | Send transactional emails via Resend — order confirmations, alerts, reports | email, notifications | ZeptoClaw |
+| [shopee](./shopee/) | Malaysian e-commerce helper for Shopee seller operations | shopee, ecommerce, sea | ZeptoClaw |
+| [summarize-url](./summarize-url/) | Fetch a URL and extract clean text content for summarization or analysis | web, scraping, research | ZeptoClaw |
+| [telegram-notify](./telegram-notify/) | Send Telegram notifications and alerts via Bot API | telegram, notifications | ZeptoClaw |
+| [weather](./weather/) | Get current weather and forecasts without API keys | weather, utilities | ZeptoClaw |
+| [whatsapp-blast](./whatsapp-blast/) | Send bulk WhatsApp messages via WhatsApp Cloud API for SEA businesses | whatsapp, sea, ecommerce | ZeptoClaw |
+| [template](./template/) | Starter template for new skills | — | ZeptoClaw |
 
 ## Contributing a Skill
 
