@@ -16,6 +16,8 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 | Skill | Description | Author |
 |-------|-------------|--------|
 | [clawpocket](./clawpocket/) | Publish trade signals to ClawPocket marketplace | [@aimaneth](https://github.com/aimaneth) |
+| [shopee](./shopee/) | Malaysian e-commerce helper for Shopee seller operations | ZeptoClaw |
+| [weather](./weather/) | Get current weather and forecasts without API keys | ZeptoClaw |
 | [template](./template/) | Starter template for new skills | ZeptoClaw |
 
 ## Contributing a Skill
