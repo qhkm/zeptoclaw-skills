@@ -1,7 +1,7 @@
 ---
 name: agentic-wallet
-version: 1.0.0
-description: Give your agent a standalone on-chain wallet for gasless trades, funding, and autonomous payments.
+version: 2.0.0
+description: Give your agent a standalone on-chain wallet for gasless trades, funding, and autonomous x402 M2M payments.
 author: aimaneth
 license: MIT
 tags:
@@ -10,84 +10,152 @@ tags:
   - coinbase
   - base
   - trading
-metadata: {"zeptoclaw":{"emoji":"💳","requires":{"anyBins":["npx"]}}}
+  - x402
+metadata: {"zeptoclaw":{"emoji":"💳","requires":{"anyBins":["npx", "node"]}}}
 ---
 
 # Agentic Wallet Skill
 
 Give a ZeptoClaw agent its own standalone on-chain wallet natively controlled by the agent. Powered by Coinbase Developer Platform (CDP).
 
-With this skill, an agent can:
-- Hold stablecoins (USDC) and other tokens on the Base network
-- Execute trades and swaps autonomously, completely **gasless**
-- Send funds to other addresses
-- Pay for external AI APIs via the x402 machine-to-machine payment protocol
+Unlike wallet SDKs that need to be coded into the agent's source code, **Agentic Wallet** provides a straightforward CLI (`awal`) that your agent can use via standard shell execution to manage funds, execute gasless trades, and engage in agent-to-agent commerce dynamically.
 
-## Check Wallet Status
+## 1. Authentication
 
-Check if the agent is already authenticated and has a wallet instance. 
+The wallet requires authentication. The agent must log in using an email OTP flow.
 
 ```bash
-npx awal status
+# 1. Initiate login (agent must ask user for the email)
+npx awal@latest auth login agent@example.com
+
+# 2. The API returns a flowId. The agent must ask the user for the OTP code sent to their email.
+# 3. Verify OTP:
+npx awal@latest auth verify <flowId> <otp>
 ```
 
-If it returns "Not configured", you need to authenticate first.
+Check auth status at any time:
+```bash
+npx awal@latest status
+```
 
-## Authentication
+## 2. Wallet Info & Funding
 
-Create a new wallet or log into an existing one via Email OTP.
+All Agentic Wallet operations occur on the **Base** network. The wallet must be funded with USDC or ETH on Base.
 
 ```bash
-npx awal login
+# Get the wallet's Base network address to receive funds
+npx awal@latest address
+
+# Check the wallet's balances
+npx awal@latest balance
 ```
 
-The CLI will prompt you to enter an email address and then an OTP code sent to that email. **Note:** As an agent, you must ask the user for their email and the OTP code to complete this step, or use an email you have access to.
+To fund the wallet via fiat (credit card/Apple Pay), generate a funding link for the user:
+```bash
+# Opens the Coinbase Onramp UI (or provides a URL if running headless)
+npx awal@latest show
+```
 
-## Fund the Wallet
+## 3. Send Funds (Gasless)
 
-Get the wallet's Base network address to send funds to.
+Send tokens to any EVM address or ENS name on Base. These transactions are sponsored and do not require the agent to hold ETH for gas.
 
 ```bash
-# Returns the 0x address of the agent's wallet
-npx awal address
+# Send exact USDC amounts to an address
+npx awal@latest send 1.50 0x1234...abcd
+
+# Send using a fiat value prefix
+npx awal@latest send "$5.00" 0x1234...abcd
+
+# Send to an ENS name (awal resolves it automatically)
+npx awal@latest send 10 vitalik.eth
 ```
 
-Tell the user to send Base ETH, USDC, or other Base network tokens to this address.
+## 4. Trade Tokens (Gasless)
 
-## Send Funds
-
-Send tokens to any EVM address on Base. **Gasless**.
+Swap tokens directly from the agent's wallet. Trades are also gasless.
 
 ```bash
-# Send 5 USDC to vitalik.eth
-npx awal send 5 usdc vitalik.eth
+# Trade exactly 1 USDC for ETH
+npx awal@latest trade 1 usdc eth
 
-# Send 0.01 WETH to a specific address
-npx awal send 0.01 weth 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+# Trade $5 worth of USDC for DEGEN, with 2% slippage (200 bps)
+npx awal@latest trade $5 usdc degen --slippage 200
+
+# Trade using contract addresses directly
+npx awal@latest trade 100 0x83358... 0x42000...
 ```
 
-## Trade / Swap Tokens
+## 5. Pay for Services (x402)
 
-Swap exact amounts of tokens directly from the agent's wallet on the Base network. **Gasless**.
+Agentic wallets natively support the **x402** protocol for machine-to-machine (M2M) commerce. When the agent needs to access a paid API, it can pay the invoice autonomously.
 
 ```bash
-# Swap 10 USDC into ETH
-npx awal trade 10 usdc eth
+# Basic GET request to a paid API. Automatically detects the x402 requirement and pays it.
+npx awal@latest x402 pay https://example.com/api/weather
 
-# Swap 0.05 WETH into DEGEN
-npx awal trade 0.05 weth degen
+# Prevent overspending by setting a hard cap (e.g., max $0.10)
+npx awal@latest x402 pay https://example.com/api/weather --max-amount 100000
+
+# Advanced POST request paying for a specialized AI model
+npx awal@latest x402 pay https://example.com/api/sentiment \
+  -X POST \
+  -d '{"text": "Analyze this text"}'
 ```
 
-## Pay for APIs (x402)
+*(Note: `--max-amount 100000` equals $0.10 because x402 uses 6 decimal places for USDC).*
 
-Agentic wallets support the **x402** protocol for machine-to-machine commerce. When an agent encounters an API that returns a HTTP `402 Payment Required` status code with an x402 header, the agent can use `awal` to pay for the invoice autonomously.
+## 6. Discover Paid APIs (x402 Bazaar)
+
+Agents can search the **x402 Bazaar** to discover paid APIs that other agents are hosting.
 
 ```bash
-# Pay an x402 invoice to access a paid API
-npx awal pay <invoice_string>
+# Search for weather APIs in the bazaar (returns top 5 results)
+npx awal@latest x402 bazaar search "weather"
+
+# Search for AI models and return the top 10
+npx awal@latest x402 bazaar search "sentiment analysis" -k 10
+
+# List all available bazaar resources with full details
+npx awal@latest x402 bazaar list --full
+
+# Inspect the exact payment requirements (price) for a specific API before calling it
+npx awal@latest x402 details https://example.com/api/weather
 ```
 
-## Tips
+## 7. Monetize Services
 
-- All operations through `awal` occur on the **Base** network. Make sure the wallet is funded on Base.
-- Transactions like sending or trading tokens are **gasless** (sponsored by Coinbase), so the agent doesn't need to hold ETH just to pay for gas to send USDC.
+Agents can also *earn* money by hosting their own paid x402 APIs. The agent can write and run a simple Node.js Express server using the `x402-express` middleware.
+
+```javascript
+// index.js (Agent writes this file to start earning)
+const express = require("express");
+const { paymentMiddleware } = require("x402-express");
+
+const app = express();
+app.use(express.json());
+
+// 1. Get the agent's wallet address using `npx awal@latest address`
+const PAY_TO = "0xYOUR_AGENT_WALLET_ADDRESS";
+
+// 2. Set up the payment requirements ($0.05 per request)
+const payment = paymentMiddleware(PAY_TO, {
+  "POST /api/analyze": { 
+      price: "$0.05", 
+      network: "base" 
+  },
+});
+
+// 3. Protect the route with the middleware
+app.post("/api/analyze", payment, (req, res) => {
+  res.json({ result: "Here is your paid analysis" });
+});
+
+app.listen(3000, () => console.log("Agent API running on port 3000"));
+```
+
+Other agents can now call your agent's API using `npx awal@latest x402 pay http://<your-ip>:3000/api/analyze` and the USDC will flow directly into your agent's wallet!
+
+## Environment Notes
+
+This skill requires Node.js and `npx` to be installed in the agent's execution environment. No global npm installs are required since `npx awal@latest` fetches the tool dynamically.
