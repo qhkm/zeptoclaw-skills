@@ -131,7 +131,7 @@ If they need to create one at the Bankr Terminal:
 
 #### Separate LLM Gateway Key (Optional)
 
-If your LLM gateway key differs from your API key, pass `--llm-key` during login or run `bankr config set llmKey YOUR_LLM_KEY` afterward. When not set, the API key is used for both. See [references/llm-gateway.md](references/llm-gateway.md) for full details.
+If your LLM gateway key differs from your API key, pass `--llm-key` during login or run `bankr config set llmKey YOUR_LLM_KEY` afterward. When not set, the API key is used for both. See the Advanced Reference Guide below (llm-gateway) for full details.
 
 #### Verify Setup
 
@@ -212,7 +212,7 @@ Omit `threadId` to start a new conversation. CLI equivalent: `bankr prompt --con
 
 For full API details (request/response schemas, job states, rich data, polling strategy), see:
 
-**Reference**: [references/api-workflow.md](references/api-workflow.md) | [references/sign-submit-api.md](references/sign-submit-api.md)
+**Reference**: See Advanced Reference Guide below (api-workflow) | the Advanced Reference Guide below (sign-submit-api)
 
 ## CLI Command Reference
 
@@ -372,7 +372,7 @@ curl -X POST "https://llm.bankr.bot/v1/chat/completions" \
 
 For full model list, provider config JSON shape, SDK examples (Python, TypeScript), all setup commands, and troubleshooting, see:
 
-**Reference**: [references/llm-gateway.md](references/llm-gateway.md)
+**Reference**: See Advanced Reference Guide below (llm-gateway)
 
 ## Capabilities Overview
 
@@ -385,7 +385,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - **DCA**: Dollar-cost averaging strategies
 - **TWAP**: Time-weighted average pricing
 
-**Reference**: [references/token-trading.md](references/token-trading.md)
+**Reference**: See Advanced Reference Guide below (token-trading)
 
 ### Portfolio Management
 
@@ -396,7 +396,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Multi-chain aggregation
 - Filter by chain: `bankr balances --chain base,solana` or `GET /agent/balances?chains=base,solana`
 
-**Reference**: [references/portfolio.md](references/portfolio.md)
+**Reference**: See Advanced Reference Guide below (portfolio)
 
 ### Market Research
 
@@ -407,7 +407,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Trending tokens
 - Token comparisons
 
-**Reference**: [references/market-research.md](references/market-research.md)
+**Reference**: See Advanced Reference Guide below (market-research)
 
 ### Transfers
 
@@ -416,7 +416,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Flexible amount formats
 - Social handle resolution (Twitter, Farcaster, Telegram)
 
-**Reference**: [references/transfers.md](references/transfers.md)
+**Reference**: See Advanced Reference Guide below (transfers)
 
 ### NFT Operations
 
@@ -427,7 +427,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Transfer NFTs
 - Mint from supported platforms
 
-**Reference**: [references/nft-operations.md](references/nft-operations.md)
+**Reference**: See Advanced Reference Guide below (nft-operations)
 
 ### Polymarket Betting
 
@@ -437,7 +437,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - View positions
 - Redeem winnings
 
-**Reference**: [references/polymarket.md](references/polymarket.md)
+**Reference**: See Advanced Reference Guide below (polymarket)
 
 ### Leverage Trading
 
@@ -446,7 +446,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Stop loss and take profit
 - Position management via Avantis on Base
 
-**Reference**: [references/leverage-trading.md](references/leverage-trading.md)
+**Reference**: See Advanced Reference Guide below (leverage-trading)
 
 ### Token Deployment
 
@@ -459,7 +459,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Optional vesting parameters (Solana)
 - Rate limits: 1/day standard, 10/day Bankr Club (gas sponsored within limits)
 
-**Reference**: [references/token-deployment.md](references/token-deployment.md)
+**Reference**: See Advanced Reference Guide below (token-deployment)
 
 ### Automation
 
@@ -469,7 +469,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - TWAP (time-weighted average price)
 - Scheduled commands
 
-**Reference**: [references/automation.md](references/automation.md)
+**Reference**: See Advanced Reference Guide below (automation)
 
 ### Arbitrary Transactions
 
@@ -478,7 +478,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Execute pre-built calldata from other tools
 - Value transfers with data
 
-**Reference**: [references/arbitrary-transaction.md](references/arbitrary-transaction.md)
+**Reference**: See Advanced Reference Guide below (arbitrary-transaction)
 
 ## Supported Chains
 
@@ -509,7 +509,7 @@ For full model list, provider config JSON shape, SDK examples (Python, TypeScrip
 - Use `waitForConfirmation: true` with `/agent/submit` — transactions execute immediately with no confirmation prompt
 - Rotate keys periodically and revoke immediately if compromised at [bankr.bot/api](https://bankr.bot/api)
 
-**Reference**: [references/safety.md](references/safety.md)
+**Reference**: See Advanced Reference Guide below (safety)
 
 ## Common Patterns
 
@@ -584,7 +584,7 @@ The `bankr prompt` command handles this automatically. When using the REST API d
 
 For details on the API structure, job states, polling strategy, and error handling, see:
 
-**Reference**: [references/api-workflow.md](references/api-workflow.md)
+**Reference**: See Advanced Reference Guide below (api-workflow)
 
 ### Synchronous Endpoints
 
@@ -598,7 +598,7 @@ These endpoints return immediately (no polling required) and are ideal for:
 - Gasless approvals (sign EIP-712 permits)
 - Pre-built transactions (submit raw calldata)
 
-**Reference**: [references/sign-submit-api.md](references/sign-submit-api.md)
+**Reference**: See Advanced Reference Guide below (sign-submit-api)
 
 ## Error Handling
 
@@ -612,7 +612,7 @@ Common issues and fixes:
 
 For comprehensive error troubleshooting, setup instructions, and debugging steps, see:
 
-**Reference**: [references/error-handling.md](references/error-handling.md)
+**Reference**: See Advanced Reference Guide below (error-handling)
 
 ## Best Practices
 
@@ -626,7 +626,7 @@ For comprehensive error troubleshooting, setup instructions, and debugging steps
 6. Use stop losses for leverage trading
 7. Store keys in environment variables, not source code — add `~/.bankr/` to `.gitignore`
 
-See [references/safety.md](references/safety.md) for comprehensive safety guidance.
+See the Advanced Reference Guide below (safety) for comprehensive safety guidance.
 
 ### Trading
 
@@ -781,7 +781,7 @@ curl -X POST "https://api.bankr.bot/agent/submit" \
   }'
 ```
 
-**Reference**: [references/sign-submit-api.md](references/sign-submit-api.md)
+**Reference**: See Advanced Reference Guide below (sign-submit-api)
 
 ## Resources
 
@@ -826,7 +826,7 @@ curl -s "https://api.bankr.bot/_health" -H "X-API-Key: $BANKR_API_KEY"
 
 ### API Errors
 
-See [references/error-handling.md](references/error-handling.md) for comprehensive troubleshooting.
+See the Advanced Reference Guide below (error-handling) for comprehensive troubleshooting.
 
 ### Getting Help
 
