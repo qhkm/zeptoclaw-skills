@@ -15,17 +15,32 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 
 | Skill | Description | Tags | Author |
 |-------|-------------|------|--------|
+| [airtable](./airtable/) | Read, create, update, and delete Airtable records via the REST API | airtable, database, productivity | ZeptoClaw |
+| [billplz](./billplz/) | Create bills and check payments via Billplz — Malaysia's payment gateway | billplz, payments, sea | ZeptoClaw |
 | [clawpocket](./clawpocket/) | Publish trade signals to ClawPocket marketplace | crypto, defi | [@aimaneth](https://github.com/aimaneth) |
+| [cloudflare-ops](./cloudflare-ops/) | Manage Cloudflare DNS records, Workers, KV, and R2 via the API v4 | cloudflare, dns, devops | ZeptoClaw |
+| [discord-webhook](./discord-webhook/) | Send messages and rich embeds to Discord channels via webhooks | discord, messaging, notifications | ZeptoClaw |
 | [docker-deploy](./docker-deploy/) | Deploy, update, and manage Docker Compose services in production | docker, devops | ZeptoClaw |
 | [git-release](./git-release/) | Automate semver releases — bump version, generate changelog, tag, and publish GitHub Release | git, devops, semver | ZeptoClaw |
+| [google-calendar](./google-calendar/) | List, create, update, and delete Google Calendar events via Calendar API v3 | google, calendar, productivity | ZeptoClaw |
+| [grab-merchant](./grab-merchant/) | Manage GrabFood/GrabMart orders, menus, and store hours via Merchant API | grab, food-delivery, sea | ZeptoClaw |
 | [lazada](./lazada/) | Lazada Seller Center API — manage products, orders, and inventory across SEA | lazada, ecommerce, sea | ZeptoClaw |
+| [linear](./linear/) | Manage Linear issues, projects, and teams via the GraphQL API | linear, issues, project-management | ZeptoClaw |
 | [make-invoice](./make-invoice/) | Generate professional HTML/PDF invoices from order data and email them | invoice, billing, pdf | ZeptoClaw |
 | [notion](./notion/) | Read, create, and update Notion pages and databases via the official API | notion, productivity | ZeptoClaw |
 | [postgres](./postgres/) | PostgreSQL queries, schema management, backups, and performance tuning | database, sql | ZeptoClaw |
 | [send-email](./send-email/) | Send transactional emails via Resend — order confirmations, alerts, reports | email, notifications | ZeptoClaw |
+| [sentry](./sentry/) | Monitor and resolve Sentry issues, view project stats, and manage errors | sentry, monitoring, devops | ZeptoClaw |
 | [shopee](./shopee/) | Malaysian e-commerce helper for Shopee seller operations | shopee, ecommerce, sea | ZeptoClaw |
+| [slack-msg](./slack-msg/) | Post messages, list channels, and reply to threads via Slack Web API | slack, messaging, communication | ZeptoClaw |
+| [supabase](./supabase/) | Query tables, insert rows, and manage auth users via Supabase PostgREST | supabase, database, backend | ZeptoClaw |
 | [summarize-url](./summarize-url/) | Fetch a URL and extract clean text content for summarization or analysis | web, scraping, research | ZeptoClaw |
 | [telegram-notify](./telegram-notify/) | Send Telegram notifications and alerts via Bot API | telegram, notifications | ZeptoClaw |
+| [tiktok-shop](./tiktok-shop/) | Manage TikTok Shop products, orders, and inventory via Open API v2 | tiktok, ecommerce, sea | ZeptoClaw |
+| [todoist](./todoist/) | Manage Todoist tasks and projects via the REST API v2 | todoist, tasks, productivity | ZeptoClaw |
+| [tokopedia](./tokopedia/) | Manage Tokopedia shop products, orders, and inventory via Seller API | tokopedia, ecommerce, sea | ZeptoClaw |
+| [twilio-sms](./twilio-sms/) | Send and manage SMS messages via the Twilio API | twilio, sms, communication | ZeptoClaw |
+| [vercel](./vercel/) | Manage Vercel deployments, projects, and domains via the REST API | vercel, deployment, devops | ZeptoClaw |
 | [weather](./weather/) | Get current weather and forecasts without API keys | weather, utilities | ZeptoClaw |
 | [whatsapp-blast](./whatsapp-blast/) | Send bulk WhatsApp messages via WhatsApp Cloud API for SEA businesses | whatsapp, sea, ecommerce | ZeptoClaw |
 | [template](./template/) | Starter template for new skills | — | ZeptoClaw |
