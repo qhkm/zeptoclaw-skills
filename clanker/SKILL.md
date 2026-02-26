@@ -1,12 +1,30 @@
 ---
 name: clanker
 description: Deploy ERC20 tokens on Base, Ethereum, Arbitrum, and other EVM chains using the Clanker SDK. Use when the user wants to deploy a new token, create a memecoin, set up token vesting, configure airdrops, manage token rewards, claim LP fees, or update token metadata. Supports V4 deployment with vaults, airdrops, dev buys, custom market caps, vanity addresses, and multi-chain deployment.
+version: 1.0.0
+author: BankrBot
+license: MIT
+tags:
+  - crypto
+  - defi
+  - token-deployment
+  - base
 metadata: {"zeptoclaw":{"emoji":"🚀","requires":{"anyBins":["npm", "yarn", "pnpm"]}}}
 ---
 
 # Clanker SDK
 
 Deploy production-ready ERC20 tokens with built-in liquidity pools using the official Clanker TypeScript SDK.
+
+
+## 🚨 Financial Safety Guardrails
+
+This skill enables high-risk financial operations (token deployment requires gas, dev buys require funds, and liquidity parameters are immutable). You MUST adhere to the following safety rules:
+
+- **Always confirm with the user before executing the deployment script.**
+- **Display all parameters clearly before execution:** Token Name, Symbol, Total Supply, Vault allocations, Dev buy amounts, and target chain.
+- **Double-check dev buy amounts:** Do NOT execute large dev buys without explicit double-confirmation from the user.
+- **Warn users about irreversibility:** Smart contract deployments are permanent and cannot be deleted once broadcast to the blockchain.
 
 ## Overview
 
