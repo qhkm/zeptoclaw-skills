@@ -15,8 +15,11 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 
 | Skill | Description | Tags | Author |
 |-------|-------------|------|--------|
+| [agentic-wallet](./agentic-wallet/) | Give your agent a standalone on-chain wallet for gasless trades, funding, and autonomous x402 M2M payments | crypto, wallet, coinbase, base, x402 | [@aimaneth](https://github.com/aimaneth) |
 | [airtable](./airtable/) | Read, create, update, and delete Airtable records via the REST API | airtable, database, productivity | ZeptoClaw |
+| [bankr](./bankr/) | AI-powered crypto trading agent via natural language — trade, check balances, manage portfolios, bet on Polymarket, and access LLM gateway via Bankr CLI | crypto, defi, trading, wallet | [@aimaneth](https://github.com/aimaneth) |
 | [billplz](./billplz/) | Create bills and check payments via Billplz — Malaysia's payment gateway | billplz, payments, sea | ZeptoClaw |
+| [clanker](./clanker/) | Deploy ERC20 tokens on Base and EVM chains using the Clanker SDK — supports vaults, airdrops, dev buys, and multi-chain | crypto, defi, token-deployment, base | [@aimaneth](https://github.com/aimaneth) |
 | [clawpocket](./clawpocket/) | Publish trade signals to ClawPocket marketplace | crypto, defi | [@aimaneth](https://github.com/aimaneth) |
 | [cloudflare-ops](./cloudflare-ops/) | Manage Cloudflare DNS records, Workers, KV, and R2 via the API v4 | cloudflare, dns, devops | ZeptoClaw |
 | [discord-webhook](./discord-webhook/) | Send messages and rich embeds to Discord channels via webhooks | discord, messaging, notifications | ZeptoClaw |
@@ -28,6 +31,7 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 | [linear](./linear/) | Manage Linear issues, projects, and teams via the GraphQL API | linear, issues, project-management | ZeptoClaw |
 | [make-invoice](./make-invoice/) | Generate professional HTML/PDF invoices from order data and email them | invoice, billing, pdf | ZeptoClaw |
 | [notion](./notion/) | Read, create, and update Notion pages and databases via the official API | notion, productivity | ZeptoClaw |
+| [obsidian-vault](./obsidian-vault/) | Manage Obsidian vaults via filesystem tools — frontmatter, wikilinks, tags, tasks, daily notes, and templates | obsidian, notes, productivity | ZeptoClaw |
 | [postgres](./postgres/) | PostgreSQL queries, schema management, backups, and performance tuning | database, sql | ZeptoClaw |
 | [send-email](./send-email/) | Send transactional emails via Resend — order confirmations, alerts, reports | email, notifications | ZeptoClaw |
 | [sentry](./sentry/) | Monitor and resolve Sentry issues, view project stats, and manage errors | sentry, monitoring, devops | ZeptoClaw |
@@ -40,6 +44,7 @@ zeptoclaw skills install --github qhkm/zeptoclaw-skills   # install all
 | [todoist](./todoist/) | Manage Todoist tasks and projects via the REST API v2 | todoist, tasks, productivity | ZeptoClaw |
 | [tokopedia](./tokopedia/) | Manage Tokopedia shop products, orders, and inventory via Seller API | tokopedia, ecommerce, sea | ZeptoClaw |
 | [twilio-sms](./twilio-sms/) | Send and manage SMS messages via the Twilio API | twilio, sms, communication | ZeptoClaw |
+| [uniswap](./uniswap/) | Get swap quotes, check token approvals, execute swaps, and generate deep links via the Uniswap Trading API | crypto, defi, trading, uniswap | [@aimaneth](https://github.com/aimaneth) |
 | [vercel](./vercel/) | Manage Vercel deployments, projects, and domains via the REST API | vercel, deployment, devops | ZeptoClaw |
 | [weather](./weather/) | Get current weather and forecasts without API keys | weather, utilities | ZeptoClaw |
 | [whatsapp-blast](./whatsapp-blast/) | Send bulk WhatsApp messages via WhatsApp Cloud API for SEA businesses | whatsapp, sea, ecommerce | ZeptoClaw |
