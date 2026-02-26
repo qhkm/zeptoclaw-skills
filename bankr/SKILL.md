@@ -15,7 +15,8 @@ env_needed:
     required: false
   - name: BANKR_LLM_KEY
     description: Separate API key for the LLM gateway (optional)
-    required: false\nmetadata: {"zeptoclaw":{"emoji":"📺","homepage":"https://bankr.bot","requires":{"anyBins":["bankr"]}}}
+    required: false
+metadata: {"zeptoclaw":{"emoji":"📺","homepage":"https://bankr.bot","requires":{"anyBins":["bankr"]}}}
 ---
 
 # Bankr
