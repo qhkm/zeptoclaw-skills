@@ -9,7 +9,10 @@ tags:
   - defi
   - token-deployment
   - base
-metadata: {"zeptoclaw":{"emoji":"🚀","requires":{"anyBins":["npm", "yarn", "pnpm"]}}}
+env_needed:
+  - name: PRIVATE_KEY
+    description: Private key for the EVM wallet deploying the tokens (must start with 0x)
+    required: true\nmetadata: {"zeptoclaw":{"emoji":"🚀","requires":{"anyBins":["npm", "yarn", "pnpm"]}}}
 ---
 
 # Clanker SDK
