@@ -106,7 +106,7 @@ Deploy tokens with full customization including metadata, social links, and pool
 - Vanity address generation
 - Custom pool configurations
 
-**Reference:** [references/deployment.md](references/deployment.md)
+**Reference:** the Advanced Reference Guide below (deployment)
 
 ### 2. Vault (Token Vesting)
 
@@ -121,7 +121,7 @@ vault: {
 }
 ```
 
-**Reference:** [references/vesting.md](references/vesting.md)
+**Reference:** the Advanced Reference Guide below (vesting)
 
 ### 3. Airdrops
 
@@ -143,7 +143,7 @@ airdrop: {
 }
 ```
 
-**Reference:** [references/airdrops.md](references/airdrops.md)
+**Reference:** the Advanced Reference Guide below (airdrops)
 
 ### 4. Rewards Configuration
 
@@ -204,7 +204,7 @@ rewards: {
 }
 ```
 
-**Reference:** [references/rewards.md](references/rewards.md)
+**Reference:** the Advanced Reference Guide below (rewards)
 
 ### 5. Dev Buy
 
@@ -238,7 +238,7 @@ pool: {
 }
 ```
 
-**Reference:** [references/pool-config.md](references/pool-config.md)
+**Reference:** the Advanced Reference Guide below (pool-config)
 
 ### 7. Anti-Sniper Protection
 
