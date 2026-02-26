@@ -1,6 +1,14 @@
 ---
 name: bankr
 description: AI-powered crypto trading agent and LLM gateway via natural language. Use when the user wants to trade crypto, check portfolio balances, view token prices, transfer crypto, manage NFTs, use leverage, bet on Polymarket, deploy tokens, set up automated trading, sign and submit raw transactions, or access LLM models through the Bankr LLM gateway funded by your Bankr wallet. Supports Base, Ethereum, Polygon, Solana, and Unichain.
+version: 1.0.0
+author: BankrBot
+license: MIT
+tags:
+  - crypto
+  - trading
+  - defi
+  - wallet
 metadata: {"zeptoclaw":{"emoji":"📺","homepage":"https://bankr.bot","requires":{"anyBins":["bankr"]}}}
 ---
 
@@ -12,6 +20,16 @@ Execute crypto trading and DeFi operations using natural language. Two integrati
 2. **REST API** — Call `https://api.bankr.bot` directly from any language or tool
 
 Both use the same API key and the same async job workflow under the hood.
+
+
+## 🚨 Financial Safety Guardrails
+
+These skills enable high-risk financial operations (leverage trading up to 100x, token deployment, Polymarket betting, raw transaction submission). You MUST adhere to the following safety rules:
+
+- **Always confirm with the user before executing any transaction.**
+- **Display amounts, fees, slippage, and risk level before execution.**
+- **Refuse to execute leverage >10x without explicit double-confirmation.**
+- **Warn users about irreversible on-chain operations.**
 
 ## Getting an API Key
 
