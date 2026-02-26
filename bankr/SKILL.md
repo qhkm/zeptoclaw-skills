@@ -9,7 +9,13 @@ tags:
   - defi
   - trading
   - wallet
-metadata: {"zeptoclaw":{"emoji":"📺","homepage":"https://bankr.bot","requires":{"anyBins":["bankr"]}}}
+env_needed:
+  - name: BANKR_API_KEY
+    description: API key from the Bankr Terminal (optional if using email interactive login)
+    required: false
+  - name: BANKR_LLM_KEY
+    description: Separate API key for the LLM gateway (optional)
+    required: false\nmetadata: {"zeptoclaw":{"emoji":"📺","homepage":"https://bankr.bot","requires":{"anyBins":["bankr"]}}}
 ---
 
 # Bankr
