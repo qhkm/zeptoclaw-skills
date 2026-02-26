@@ -1,18 +1,13 @@
 ---
 name: clanker
-description: Deploy ERC20 tokens on Base, Ethereum, Arbitrum, and other EVM chains using the Clanker SDK. Use when the user wants to deploy a new token, create a memecoin, set up token vesting, configure airdrops, manage token rewards, claim LP fees, or update token metadata. Supports V4 deployment with vaults, airdrops, dev buys, custom market caps, vanity addresses, and multi-chain deployment.
 version: 1.0.0
+description: Deploy ERC20 tokens on Base, Ethereum, Arbitrum, and other EVM chains using the Clanker SDK. Use when the user wants to deploy a new token, create a memecoin, set up token vesting, configure airdrops, manage token rewards, claim LP fees, or update token metadata. Supports V4 deployment with vaults, airdrops, dev buys, custom market caps, vanity addresses, and multi-chain deployment.
 author: BankrBot
 license: MIT
 tags:
-  - crypto
-  - defi
-  - token-deployment
-  - base
+  - crypto\n  - defi\n  - token-deployment\n  - base
 metadata: {"zeptoclaw":{"emoji":"🚀","requires":{"anyBins":["npm", "yarn", "pnpm"]}}}
----
-
-# Clanker SDK
+---\n\n# Clanker SDK
 
 Deploy production-ready ERC20 tokens with built-in liquidity pools using the official Clanker TypeScript SDK.
 
